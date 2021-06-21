@@ -44,6 +44,87 @@ if (iconMenu) {
 }
 
 
+function handleCheckedSymptoms() {
+    let checked = document.getElementsByClassName('checked');
+    const symptoms = document.querySelectorAll('.symptoms__item');
+    const button = document.querySelector('.symptoms__button');
+    const close = document.querySelectorAll('.result-text>.close');
+    const overlay = document.querySelector('.result-text__wrap');
+    const overlayAll = document.querySelector('.result-overlay');
+    const resultText = document.querySelector('.result-text');
+    const resultTextContainer = document.querySelector('.result-text__container');
+    const results = [
+        'Вероятность того, что вы сейчас заражены, невысока. Вы можете укрепить иммунитет и проходить плановую дегельминтизацию раз в год.',
+        'Комбинация Ваших симптомов говорит о высокой вероятности заражения одним из таких видов паразитов: токсоплазмы, аскариды, острицы, цепень или некоторые другие виды. Заражение могло произойти через опасные в плане заражения предметы (мобильный телефон, деньги, обувь), через воду из водопровода, еду без надлежащей термообработки (суши, малосольная рыба, сало, копчености, салаты из сырых овощей), через домашних животных или почву. Вам следует начать дегельминтизацию в кратчайшие сроки и повторять ее не реже, чем раз в год.',
+        'При комбинации Ваших симптомов можно с уверенностью утверждать, что вы заражены паразитами. Скорее всего, с Вами живут одновременно несколько видов гельминтов: токсоплазмы, цепни, лямблии, аскариды, анкилостомы, власоглавы, острицы или другие. Заражение могло произойти через опасные в плане заражения предметы (мобильный телефон, деньги, обувь), через воду из водопровода, еду без надлежащей термообработки (суши, малосольная рыба, сало, копчености, салаты из сырых овощей), через домашних животных или почву. Вам необходимо начать дегельминтизацию уже сейчас, пока проблемы со здоровьем не стали необратимыми. Затем повторяйте дегельминтизацию ежегодно.'
+    ];
+
+    function toggleChecked() {
+        for (let i = 0; i < symptoms.length; i++) {
+            symptoms[i].addEventListener('click', function (e) {
+                let target = e.target;
+                while (target != this) {
+                    if (target.classList.contains('symptoms__item') == true) {
+                        return
+                    }
+                    target = target.parentNode;
+                }
+                if (target.classList.contains('checked')) {
+                    target.classList.remove('checked');
+                } else {
+                    target.classList.add('checked');
+                }
+                checked = document.getElementsByClassName('checked');
+            });
+        }
+    }
+
+    toggleChecked();
+
+    button.addEventListener('click', function () {
+        let inneredText = '';
+        switch (true) {
+            case checked.length <= 1:
+                inneredText = results[0];
+                break;
+            case checked.length > 1 && checked.length <= 4:
+                inneredText = results[1];
+                break;
+            case checked.length > 4:
+                inneredText = results[2];
+                break;
+        }
+        overlay.style.display = 'flex';
+        overlayAll.style.display = 'block';
+        resultTextContainer.innerText = inneredText;
+    });
+
+    for (let i = 0; i < close.length; i++) {
+        close[i].addEventListener('click', function () {
+            overlay.style.display = 'none';
+            overlayAll.style.display = 'none';
+            resultTextContainer.innerText = '';
+        });
+    }
+
+    overlay.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        overlayAll.style.display = 'none';
+        resultTextContainer.innerText = '';
+    });
+    overlayAll.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        overlayAll.style.display = 'none';
+        resultTextContainer.innerText = '';
+    });
+    resultText.addEventListener('click', function (e) {
+        e.stopPropagation();
+    })
+
+}
+
+handleCheckedSymptoms();
+
 // let date = new Date('May 11 2021 17:20:00');
 
 // function counts() {
