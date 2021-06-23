@@ -125,6 +125,73 @@ function handleCheckedSymptoms() {
 
 handleCheckedSymptoms();
 
+
+const parasiteItem = document.querySelectorAll('.interactive__list__item');
+const organs = document.querySelectorAll('.interactive-center__wrap>div');
+
+for (let i = 0; i < parasiteItem.length; i++) {
+    parasiteItem[i].addEventListener('mouseenter', function (e) {
+        let target = e.target;
+        let dataNumber = target.getAttribute('data-number');
+        while (target != this) {
+            if (target.classList.contains('interactive__list__item') == true) {
+                return
+            }
+            target = target.parentNode;
+        }
+        for (let i = 0; i < parasiteItem.length; i++) {
+            parasiteItem[i].classList.remove('__active');
+        }
+        target.classList.add('__active');
+        for (let i = 0; i < organs.length; i++) {
+            if (organs[i].classList.contains('__active') == false) {
+                organs[i].classList.add('__active');
+                organs[i].style.zIndex = '';
+            }
+        }
+
+        switch (+dataNumber) {
+            case 1:
+                organs[0].classList.remove('__active');
+                organs[0].style.zIndex = 9;
+                organs[0].children[0].style.filter = '';
+                break;
+            case 2:
+                organs[1].classList.remove('__active');
+                organs[1].style.zIndex = 9;
+                break;
+            case 3:
+                organs[2].classList.remove('__active');
+                organs[2].style.zIndex = 9;
+                break;
+            case 4:
+                organs[2].classList.remove('__active');
+                organs[2].style.zIndex = 9;
+                organs[3].classList.remove('__active');
+                organs[3].style.zIndex = 8;
+                organs[4].classList.remove('__active');
+                organs[4].style.zIndex = 7;
+                organs[6].classList.remove('__active');
+                organs[6].style.zIndex = 9;
+                break;
+            case 5:
+                organs[1].classList.remove('__active');
+                organs[1].style.zIndex = 10;
+                organs[2].classList.remove('__active');
+                organs[2].style.zIndex = 9;
+                organs[3].classList.remove('__active');
+                organs[3].style.zIndex = 8;
+                organs[4].classList.remove('__active');
+                organs[4].style.zIndex = 7;
+                organs[6].classList.remove('__active');
+                organs[6].style.zIndex = 9;
+                break;
+        }
+    });
+
+}
+
+
 // let date = new Date('May 11 2021 17:20:00');
 
 // function counts() {
