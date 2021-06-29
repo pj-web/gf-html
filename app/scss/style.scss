@@ -104,7 +104,7 @@ div.anim-items {
 }
 
 a {
-    color: #ff310b;
+    color: #ff4141;
 
     &:hover {
         text-decoration: underline;
@@ -385,7 +385,7 @@ figure.anim-items {
         }
         &:active {
             box-shadow: none;
-            color: #ff310b;
+            color: #ff4141;
             background-color: #fff;
 
     }
@@ -408,7 +408,7 @@ figure.anim-items {
     &__item{
         display: flex;
         flex-direction: column;
-        background-color: #ff310b;
+        background-color: #ff4141;
         color: #fff;
         min-width: 100px;
         border-radius: 10%;
@@ -2654,40 +2654,6 @@ figure.anim-items {
     }
 }
 
-.warning {
-    background: #ffffff;
-    border: 3px solid #B11212;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin: 40px 40px 40px 40px;
-    min-height: 160px;
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url('../images/warning.svg');
-        width: 112px;
-        height: 112px;
-        top: auto;
-        left: 10px;
-        bottom: auto;
-
-    }
-
-    p {
-        color: #000;
-        
-        margin: 30px 30px 30px 140px;
-    }
-}
-
-.offername {
-}
-
-
-
 
 
 .btn-buy-form {
@@ -3043,7 +3009,7 @@ ul li.footer__item::before {
         background-color: #fff;
         max-width: 800px;
         padding: 10px 10px 20px 10px;
-        margin: 60px 0 0 0;
+        margin: 30px 0 0 0;
         position: relative;
         transition: all 0.8 ease 0s;
         opacity: 0;
@@ -3074,40 +3040,7 @@ ul li.footer__item::before {
             margin: 20px;
         }
 
-        & input[type="text"] { 
-            width: 80%;
-            height: 60px;
-            border:2px solid #ff310b;
-            border-radius:5px;
-            background:#fff;
-            font-size: 24px;
-            line-height: 30px;
-            color:rgba(255, 255, 255, 0.01);
-            text-indent:34px;
-            margin-top:11px;
-            -webkit-appearance:none;
-            -moz-appearance:none;
-            appearance:none;
-            margin: 0 0 20px 0;
-        }
-
-        & input[type="tel"]{ 
-            width:80%;
-            height: 60px;
-            border:2px solid #ff310b;
-            border-radius:5px;
-            background:#fff;
-            font-size: 24px;
-            line-height: 30px;
-            color:rgba(255, 255, 255, 0.01);
-            text-indent:34px;
-            margin-top:11px;
-            -webkit-appearance:none;
-            -moz-appearance:none;
-            appearance:none;
-            margin: 0 0 20px 0;
-        }
-
+       
         .btn-buy {
             margin-bottom: 20px;
         }
@@ -3142,7 +3075,9 @@ ul li.footer__item::before {
 
 // --------------- Шапка остальных страниц -----------------------------
 
-
+.pages-title {
+    text-align: center;
+}
 .hero-pages {
     background-color: #FFCBFF;
     padding: 0px 0 0px;
@@ -3175,14 +3110,14 @@ ul li.footer__item::before {
             letter-spacing: -0.02em;
             text-transform: uppercase;
             margin: 0 0 0px 0;
-            // transform: translate(0px, 120%);
-            // opacity: 0;
-            // transition: all 0.8s ease 0s;
+            transform: translate(0px, 120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
 
-            // &.active {
-            //     transform: translate(0px, 0px);
-            //     opacity: 1;
-            // }
+            &.active {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
 		}
 
         &__small-title {
@@ -3190,15 +3125,15 @@ ul li.footer__item::before {
             line-height: 44px;
             letter-spacing: -0.02em;
             margin: 0 0 20px 0;
-            // transform: translate(0px, 120%);
-            // opacity: 0;
-            // transition: all 0.8s ease 0s;
+            transform: translate(0px, 120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
 
-            // &.active {
-            //     transform: translate(0px, 0px);
-            //     opacity: 1;
-            //     transition: all 0.8s ease 0.4s;
-            // }
+            &.active {
+                transform: translate(0px, 0px);
+                opacity: 1;
+                transition: all 0.8s ease 0.4s;
+            }
 		}
 
 
@@ -3206,26 +3141,30 @@ ul li.footer__item::before {
             font-size: 18px;
             line-height: 20px;
             font-weight: 700;
-            // transform: translate(0px, 120%);
-            // opacity: 0;
-            // transition: all 0.8s ease 0.2s;
+            transform: translate(0px, 120%);
+            opacity: 0;
+            transition: all 0.8s ease 0.2s;
 
-            // &.active {
-            //     transform: translate(0px, 0px);
-            //     opacity: 1;
-            // }
+            &.active {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+
+        &__contacts {
+            margin: 0 0 20px 0;
         }
 
 		
         &__btn-1 {
             margin-bottom: 10px;
-            // opacity: 0;
-            // transition: all 0.8s ease 0s;
+            opacity: 0;
+            transition: all 0.8s ease 0s;
 
-            // &.active {
-            //     opacity: 1;
-            //     transition: all 0.8s ease 0.4s;
-            // }
+            &.active {
+                opacity: 1;
+                transition: all 0.8s ease 0.4s;
+            }
         }
 
 		
@@ -3244,8 +3183,7 @@ ul li.footer__item::before {
 
 .doctors {
     padding: 60px 0px;
-    color: #fff;
-    background: linear-gradient(180deg, #3A2C2C 0%, #000000 100%);
+    color: #2a2a2a;
 
     &__inner {
         
@@ -3261,7 +3199,7 @@ ul li.footer__item::before {
         background-color: #C4C4C4;
         padding: 10px;
         margin: 20px 20px 40px 20px;
-        border-radius: 15px;
+        border-radius: 5px;
     }
 
     &__avatar {
@@ -3300,7 +3238,7 @@ ul li.footer__item::before {
 
         a {
             color: #fff;
-            background-color: #ff310b;
+            background-color: #ff4141;
             padding: 10px 20px 10px 20px;
             border-radius: 5px;
             transition: all 0.5s ease 0s;
@@ -3310,7 +3248,7 @@ ul li.footer__item::before {
             }
             &:active {
                 box-shadow: none;
-                color: #ff310b;
+                color: #ff4141;
                 background-color: #fff;
             }
         }
@@ -3544,65 +3482,7 @@ ul li.footer__item::before {
         }
     }
 
-    .hero-pages {
-        
-        
-
-        &::before {
-            font-size: 120px;
-            top: 0%;
-        }
-
-        &::after {
-            font-size: 120px;
-            bottom: -20%;
-        }
-
-		&__content {
-            margin: 0 40px;
-            padding: 0 0 10px 0;
-		}
-
-		&__text {
-		}
-
-		&__header {
-            font-size: 34px;
-		}
-
-		&__description {
-            display: block;
-            font-size: 14px;
-		}
-
-		&__sub-header {
-            font-size: 14px;
-		}
-
-		&__image {
-            img {
-                max-width: 250px;
-                margin-top: 20px;
-            }
-		}
-
-		&__buttons {
-		}
-
-		&__btn-1 {
-            a {
-                padding: 15px 28px 15px 28px;
-                font-size: 16px;
-            }
-		}
-
-		&__btn-2 {
-            a {
-                padding: 15px 10px 15px 10px;
-                font-size: 16px;
-            }
-		}
-}
+    
 .container {
 }
 .anim-items {
@@ -3694,7 +3574,7 @@ ul li.footer__item::before {
     width: 95%;
     padding: 40px 25px;
     position: absolute;
-    bottom: 300px
+    bottom: 800px;
 }
 
 .differences {
@@ -3781,27 +3661,6 @@ ul li.footer__item::before {
     
         &__item-section {
         }
-    }
-
-
-    .interactive-wrap {
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-pack: center;
-        justify-content: center
-    }
-    .interactive-left__wrap {
-        margin-right: 10px
-    }
-    .interactive-right__wrap .triangle {
-        display: none
-    }
-    .result-text {
-        max-width: 770px;
-        width: 95%;
-        padding: 40px 25px;
-        position: absolute;
-        bottom: 300px
     }
 
     .section4 {
@@ -3989,6 +3848,70 @@ ul li.footer__item::before {
 
     //------------------------------
 
+    .hero-pages {
+        
+        
+
+        &::before {
+            font-size: 120px;
+            top: 0%;
+        }
+
+        &::after {
+            font-size: 120px;
+            bottom: -20%;
+        }
+
+		&__content {
+            margin: 0 40px;
+            padding: 40px 0 10px 0;
+		}
+
+		&__text {
+            margin: 20px 0 0 0;
+		}
+
+		&__title {
+            font-size: 34px;
+		}
+
+		&__small-title {
+            font-size: 14px;
+            line-height: 16px;
+		}
+
+		&__sub-title {
+            font-size: 14px;
+		}
+
+		&__image {
+            img {
+                max-width: 250px;
+                margin-top: 40px;
+            }
+		}
+
+		&__buttons {
+		}
+
+        &__contacts {
+            margin: 40px 0 20px 0;
+            font-size: 14px;
+        }
+
+		&__btn-1 {
+            a {
+                padding: 10px 18px 10px 18px;
+                font-size: 16px;
+            }
+		}
+
+        .btn-buy {
+            padding: 20px 35px;
+        }
+
+}
+
    
 
     //------------------------------
@@ -4105,6 +4028,20 @@ ul li.footer__item::before {
         }
         
     }
+
+    .header {
+
+        &__logo {
+            img {
+                max-width: 60px;
+            }
+        }
+    
+        &__menu {
+        }
+    
+    }
+
 
     .header {
 
@@ -4269,59 +4206,7 @@ ul li.footer__item::before {
             }
     }
     
-    .hero-pages {
-        padding: 30px 0 0 0;
-
-        &::before {
-            display: none;
-        }
-
-        &::after {
-            display: none;
-        }
-
-		&__content {
-            flex-wrap: wrap;
-            align-items:flex-start;
-            // min-height: 55vh;
-		}
-
-		&__text {
-            width: 50%;
-		}
-
-		&__header {
-            font-size: 28px;
-		}
-
-		&__description {
-           
-            
-		}
-
-		&__sub-header {
-		}
-
-		&__image {
-            width: 50%;
-            img {
-                max-width: 200px;
-            }
-		}
-
-		&__buttons {
-            width: 100%;
-            text-align: center;
-		}
-
-		&__btn-1 {
-            margin: 0px 0 10px 0;
-		}
-
-		&__btn-2 {
-            margin: 0px 0 10px 0;
-		}
-}
+    
 .container {
 }
 .anim-items {
@@ -4532,6 +4417,7 @@ ul li.footer__item::before {
         }
     
         &__item-section {
+            
         }
     }
 
@@ -4634,7 +4520,60 @@ ul li.footer__item::before {
 
 //-----------------------
 
-   
+.hero-pages {
+
+    &__content {
+        margin: 0 20px;
+        padding: 30px 0 10px 0;
+    }
+
+    &__text {
+        margin: 20px 0 0 0;
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__small-title {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    &__sub-title {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    &__image {
+        img {
+            max-width: 250px;
+            margin-top: 10px;
+        }
+    }
+
+    &__buttons {
+    }
+
+    &__contacts {
+        margin: 40px 0 0px 0;
+        font-size: 12px;
+    }
+
+    &__btn-1 {
+        a {
+            padding: 10px 18px 10px 18px;
+            font-size: 14px;
+        }
+    }
+
+    .btn-buy {
+        padding: 15px 18px;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+}
 
 //-----------------------
 
@@ -4732,6 +4671,27 @@ ul li.footer__item::before {
         font-size: 20px;
     }
 
+    ol {
+        margin-left: 20px;
+    }
+
+    .header {
+
+        &__logo {
+            img {
+                max-width: 50px;
+            }
+        }
+    
+        &__menu {
+        }
+    
+    }
+
+    .buy__form input[type=text], .buy__form input[type=text] {
+        font-size: 20px;
+    }
+
     .blockquote {
      
     
@@ -4803,6 +4763,14 @@ ul li.footer__item::before {
         display: none
     }
 
+    .symptoms__wrap ul li {
+        padding: 0 0 0 0px;
+    }
+
+    .result-text {
+        bottom: 1100px;
+    }
+
     .differences {
         &__common-left {
             img {
@@ -4812,6 +4780,38 @@ ul li.footer__item::before {
         &__gelmiflor-right {
             img {
                 max-width: 340px;
+            }
+        }
+    }
+
+    .composition {
+
+    
+
+        &__inner {
+            
+        }
+    
+        &__items {
+        }
+
+        &__item {
+
+        }
+    
+        &__item:nth-child(odd) {
+
+            
+        }
+
+        &__item:nth-child(even) {
+
+            
+        }
+    
+        &__item-section {
+            img {
+                max-width: 380px;
             }
         }
     }
@@ -4848,6 +4848,8 @@ ul li.footer__item::before {
         font-size: 18px;
         width: 100%
     }
+
+    
 
     .pharmacology {
 
@@ -4923,6 +4925,112 @@ ul li.footer__item::before {
                 max-width: 340px;
             }
         }
+        &__symptoms-text {
+           
+        }
+    }
+    .prevention {
+
+    
+
+        &__inner {
+            
+        }
+    
+        &__items {
+        }
+
+        &__item {
+
+        }
+    
+        &__item:nth-child(odd) {
+
+            
+        }
+
+        &__item:nth-child(even) {
+
+            
+        }
+    
+        &__item-section {
+            margin: 0 0 20px 0;
+            img {
+                max-width: 360px;
+            }
+        }
+    }
+
+    .pharmacies {
+        &__inner {
+            margin: 0 20px;
+        }
+    
+        &__items {
+            max-width: 380px;
+        }
+    
+        &__item {
+            max-width: 280px;
+            
+        }
+        &__item-text {
+            padding: 10px 10px 10px 10px;
+        }
+    }
+
+    .hero-pages {
+        padding: 10px 0 0 0;
+
+		&__content {
+            flex-wrap: wrap;
+            align-items:flex-start;
+		}
+
+		&__text {
+            // width: 50%;
+            margin: 40px 0 0 0;
+		}
+
+		&__title {
+            font-size: 20px;
+            line-height: 28px;
+		}
+
+		&__small-title {
+            margin: 0 0 10px 0;
+		}
+
+        &__sub-title {
+
+        }
+
+		&__image {
+            img {
+                max-width: 180px;
+            }
+		}
+
+		&__buttons {
+            width: 100%;
+            text-align: center;
+		}
+
+        &__contacts {
+            margin: 10px 0 10px 0;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+		&__btn-1 {
+            margin: 0px 0 10px 0;
+		}
+
+		&__btn-2 {
+            margin: 0px 0 10px 0;
+		}
     }
 }
 
@@ -4976,13 +5084,14 @@ ul li.footer__item::before {
         }
     
         &__logo {
+            img {
+                max-width: 45px;
+            }
         }
     
         &__menu {
         }
     
-        &__phone {
-        }
     }
 
     .menu {
@@ -5099,61 +5208,7 @@ ul li.footer__item::before {
             }
     }
 
-    .hero-pages {
-        padding: 30px 0 0 0;
-
-        &::before {
-            display: none;
-        }
-
-        &::after {
-            display: none;
-        }
-
-		&__content {
-            flex-wrap: wrap;
-            // min-height: 60vh;
-		}
-
-		&__text {
-            width: 50%;
-		}
-
-		&__header {
-            font-size: 28px;
-		}
-
-		&__description {
-            font-size: 12px;
-            margin: 0;
-           
-            
-		}
-
-		&__sub-header {
-            font-size: 12px;
-		}
-
-		&__image {
-            width: 50%;
-            img {
-                max-width: 180px;
-            }
-		}
-
-		&__buttons {
-            width: 100%;
-            text-align: center;
-		}
-
-		&__btn-1 {
-            margin: 0px 0 10px 0;
-		}
-
-		&__btn-2 {
-            margin: 0px 0 20px 0;
-		}
-}
+    
 
     .description {
 
@@ -5328,9 +5383,6 @@ ul li.footer__item::before {
     }
 
     .pharmacies {
-        &__inner {
-            margin: 0 20px;
-        }
     
         &__items {
             max-width: 360px;
@@ -5339,9 +5391,6 @@ ul li.footer__item::before {
         &__item {
             max-width: 260px;
             
-        }
-        &__item-text {
-            padding: 10px 10px 10px 10px;
         }
     }
 
@@ -5448,6 +5497,63 @@ ul li.footer__item::before {
 
     //-----------------
 
+    .hero-pages {
+        padding: 10px 0 0 0;
+
+		&__content {
+            padding: 25px 0 5px;
+		}
+
+		&__text {
+            
+            margin: 40px 0 0 0;
+		}
+
+		&__title {
+            font-size: 18px;
+            line-height: 22px;
+		}
+
+		&__small-title {
+            margin: 0 0 10px 0;
+		}
+
+        &__sub-title {
+            font-size: 9px;
+            line-height: 12px;
+
+        }
+
+		&__image {
+            img {
+                max-width: 160px;
+            }
+		}
+
+		&__buttons {
+            width: 100%;
+            text-align: center;
+		}
+
+        &__contacts {
+            margin: 5px 0 5px 0;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+
+            div {
+                margin: 0 10px;
+            }
+        }
+
+		&__btn-1 {
+            margin: 0px 0 10px 0;
+		}
+
+    }
+
+    //-----------------
+
     .instruction {
         &__inner {
             margin: 0 20px;
@@ -5524,26 +5630,10 @@ ul li.footer__item::before {
         }
     }
 
-    .hero-pages {
-        &__header {
-                font-size: 18px;
-        }
-        &__sub-header {
-            font-size: 10px;
-        }
+   
 
-        &__image {
-            img {
-                max-width: 150px;
-            }
-		}
-    }
-    .description {
-        &__column-1 {
-            img {
-                max-width: 260px;
-            }
-        }
+    .result-text {
+        bottom: 1300px;
     }
 
     .differences {
@@ -5634,6 +5724,63 @@ ul li.footer__item::before {
         &__column-2 {
             margin: 0 0 0 0px;
 		}
+    }
+
+    //-------------------------
+
+    .hero-pages {
+        padding: 10px 0 0 0;
+
+		&__content {
+            padding: 25px 0 5px;
+		}
+
+		&__text {
+            
+            margin: 30px 0 0 0;
+		}
+
+		&__title {
+            font-size: 16px;
+            line-height: 18px;
+		}
+
+		&__small-title {
+            margin: 0 0 10px 0;
+		}
+
+        &__sub-title {
+            font-size: 8px;
+            line-height: 10px;
+
+        }
+
+		&__image {
+            img {
+                max-width: 125px;
+            }
+		}
+
+		&__buttons {
+            width: 100%;
+            text-align: center;
+		}
+
+        &__contacts {
+            margin: 5px 0 5px 0;
+            font-size: 8px;
+            display: flex;
+            justify-content: center;
+
+            div {
+                margin: 0 10px;
+            }
+        }
+
+		&__btn-1 {
+            margin: 0px 0 10px 0;
+		}
+
     }
 
     //-------------------------

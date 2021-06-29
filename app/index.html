@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @@include('_yand-goo-meta.html')
     <link rel="icon" type="image/png" sizes="48x48" href="images/icon-48.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/icon-96.png">
     <link rel="icon" type="image/png" sizes="144x144" href="images/icon-144.png">
@@ -17,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,300;1,500&display=swap" rel="stylesheet">
     <meta name="description" content="Официальный сайт производителя препарата от паразитов Гельмифлор+. Купить прапарат Gelmiflor+. Отзывы, цена в аптеке. Это развод?">
     <title>Гельмифлор+ от паразитов® – купить в аптеке, цена, отзывы, инструкция</title>
-    @@include('_yandex-google.html')
 </head>
 <body>
     <div class="wrapper">
@@ -1127,6 +1125,70 @@
                     </div>
                 </div>
             </section>
+            <section class="buy">
+                <div class="container">
+                    <div class="buy__inner">
+                        <h2 class="anim-items anim-hide">Купить Гельмифлор+ от паразитов на официальном сайте производителя</h2>
+                        <p class="anim-items anim-hide">Купить препарат по акции можно на официальном сайте, оставив свои контакты в форме заказа. Через несколько минут вам позвонит специалист и уточнит все детали заказа, а также при вашем желании ответит на все интересующие вопросы.
+                        </p>
+                        <div class="buy__price">
+                            <h3 class="anim-items anim-hide">Акция! Только сегодня!</h3>
+                            <div class="buy__price-new">
+                                <span class="anim-items anim-hide">168 руб.</span>
+                            </div>
+                            <div class="buy__price-old">
+                                Вместо <span class="anim-items anim-hide"> 1950 руб.</span> 
+                            </div>
+                        </div>
+                        <div class="buy__columns">
+                            <div class="buy__column-1">
+                                <div class="buy__form order">
+                                    <form class="order-form" action="api.php" method="POST">
+                                        <input type='hidden' name='utm_source' value='<?=$_GET['utm_source']?>' />
+                                        <input type='hidden' name='utm_content' value='<?=$_GET['utm_content']?>' />
+                                        <input type='hidden' name='utm_campaign' value='<?=$_GET['utm_campaign']?>' />
+                                        <input type='hidden' name='utm_term' value='<?=$_GET['utm_term']?>' />
+                                        <input type='hidden' name='utm_medium' value='<?=$_GET['utm_medium']?>' />
+                                        <input type='hidden' name='sub_id1' value='<?=$_GET['sub_id1']?>' />
+                                        <input type='hidden' name='sub_id2' value='<?=$_GET['sub_id2']?>' />
+                                        <input type='hidden' name='sub_id3' value='<?=$_GET['sub_id3']?>' />
+                                        <input type='hidden' name='comment' value='<?=$_GET['comment']?>' />
+                                        <div class="order-form-input-field-wrapper">
+                                            <label class="order-form-label">Страна:</label>
+                                            <select name="country" id="country" class="country__selecor order-form-input-field">
+                                                <option value="RU">Россия</option>
+                                            </select>
+                                        </div>
+                                        <div class="order-form-input-field-wrapper">
+                                            <label class="order-form-label">Имя:</label>
+                                            <input type="text" class="order-form-input-field input-field-name" name="name" autocomplete="off" minlength="1" required="" placeholder="Введите ваше имя">
+                                        </div>
+                                        <div class="order-form-input-field-wrapper">
+                                            <label class="order-form-label">Номер телефона:</label>
+                                            <input type="tel" class="order-form-input-field input-field-phone phone-black" name="phone" maxlength="24" autocomplete="off" minlength="7" required="" placeholder="Введите ваш номер телефона">
+                                        </div>
+                                        <button class="buy__button btn-buy-form" type="submit">Купить по акции</button>
+                                        <div class="buy__checkbox">
+                                            <input checked="checked" type="checkbox" /> Нажимая на кнопку "Купить по акции", я даю согласие на <a href="privacy-policy.html">обработку персональных данных и согласен с политикой конфендициальности.</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="buy__column-2">
+                                <img class="anim-items anim-hide" src="images/buy-01.png" title="Приобести Ант Кинг для увеличения" title="Преобретение геля" alt="Где и как купить гель Ant King со скидкой" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="buy__blockquote blockquote anim-items anim-hide">
+                            <div class="blockquote__warning">
+                                <p>На данный момент цена по акции заморожена - 168 рублей. Но в связи с ажиотажем на Гельмифлор+, компания просто не успевает производить новую продукцию. Очень скоро цена может повысится в несколько раз, поэтому лучше поторопиться.</p>
+                            </div>
+                            <div class="blockquote__lightbox">
+                                <p>После разговора с менеджером ваш заказ тут же будет передан на отправку и дойдет до вас в течение 5 дней. Доставка товара исключительно наложенным платежом, то есть, оплата при получении, только тогда, когда увидите саму упаковку. Оплата наличными или картой.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="how">
                 <div class="container">
                     <div class="how__inner">
@@ -1335,17 +1397,16 @@
                               <h3 class="pharmacies__item-title">Екатеринбург</h3>
                               <div class="pharmacies__item-text">
                                   <p>Свердловская область, Екатеринбург, Орджоникидзевский район, Эльмаш, переулок Замятина, 22</p>
-<p>Свердловская область, Екатеринбург, Готвальда, 15</p>
-<p>Свердловская область, Екатеринбург, Бебеля, 162</p>
+                                    <p>Свердловская область, Екатеринбург, Готвальда, 15</p>
+                                    <p>Свердловская область, Екатеринбург, Бебеля, 162</p>
                               </div>
                             </div>
                             <div class="pharmacies__item">
                               <h3 class="pharmacies__item-title">Иваново</h3>
                               <div class="pharmacies__item-text">
                                   <p>Иваново, Минская 65</p>
-<p>Иваново, Генерала Горбатова, 19</p>
-<p>Иваново, Полка Нормандия-Неман, 83</p>
-
+                                  <p>Иваново, Генерала Горбатова, 19</p>
+                                  <p>Иваново, Полка Нормандия-Неман, 83</p>
                               </div>
                             </div>
                             <div class="pharmacies__item">
@@ -1656,7 +1717,8 @@
         </main>
         @@include('_footer.html')
     </div>        
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/interactive.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 </html>
