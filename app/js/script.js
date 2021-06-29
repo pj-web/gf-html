@@ -1,5 +1,117 @@
 "use strict"
 
+var prices = {
+	RU: {
+		country: 'Россия',
+		country1: 'России',
+		country2: 'России',
+		old: '1499',
+		new: '168',
+		money: 'руб.',
+		tel: '+7',
+	},
+	KZ: {
+		country: 'Казахстан',
+		country1: 'Казахстана',
+		country2: 'Казахстане',
+		old: '8550',
+		new: '990',
+		money: 'тенге',
+		tel: '+7',
+	},
+	BY: {
+		country: 'Беларусь',
+		country1: 'Беларуси',
+		country2: 'Беларуси',
+		old: '55',
+		new: '5',
+		money: 'руб.',
+		tel: '+375',
+	},
+};
+
+var changePrice = function changePrice(elems, value) {
+	elems.forEach(function (elem) {
+		elem.textContent = value;
+	});
+};
+
+var changePlaceholder = function changePlaceholder(elems, value) {
+	elems.forEach(function (elem) {
+		elem.placeholder = value;
+	});
+};
+
+var listenner = function listenner(e) {
+	changePrice(old_prices, prices[e.target.value].old);
+	changePrice(new_prices, prices[e.target.value]['new']);
+	changePrice(currencys, prices[e.target.value].money);
+	changePrice(country1, prices[e.target.value].country1);
+	changePrice(country2, prices[e.target.value].country2);
+	changePrice(country, prices[e.target.value].country);
+	changePlaceholder(phoneInputs, prices[e.target.value].tel);
+	selectors.forEach(function (elem) {
+		elem.value = e.target.value;
+	});
+};
+
+var append = function append() {
+	selectors.forEach(function (elem) {
+		elem.addEventListener('change', function (e) {
+			listenner(e);
+		});
+		elem.childNodes.forEach(function () {
+			var firstElementChild = elem.firstElementChild;
+			if (firstElementChild) elem.removeChild(firstElementChild);
+		});
+
+		for (var countr in prices) {
+			var option = document.createElement('option');
+			option.value = countr;
+			option.innerHTML = prices[countr].country;
+			elem.append(option);
+		}
+	});
+};
+
+var contrySelect = function contrySelect() {
+	var query_str = document.location.search.replace('?', '').split('&'),
+		countryName = '';
+	query_str.forEach(function (elem) {
+		if (elem.split('=')[1] && elem.split('=')[0] === 'country_code') {
+			countryName = elem.split('=')[1];
+		}
+	});
+	if (!Object.keys(prices).includes(countryName))
+		countryName = Object.keys(prices)[0];
+	changePrice(old_prices, prices[countryName].old);
+	changePrice(new_prices, prices[countryName]['new']);
+	changePrice(currencys, prices[countryName].money);
+	changePrice(country1, prices[countryName].country1);
+	changePrice(country2, prices[countryName].country2);
+	changePrice(country, prices[countryName].country);
+	changePlaceholder(phoneInputs, prices[countryName].tel);
+	selectors.forEach(function (elem) {
+		elem.value = countryName;
+	});
+};
+
+var selectors = document.querySelectorAll('.country__selecor'),
+	old_prices = document.querySelectorAll('.old_price'),
+	new_prices = document.querySelectorAll('.new_price'),
+	currencys = document.querySelectorAll('.currency_price'),
+	country = document.querySelectorAll('.country_name'),
+	country1 = document.querySelectorAll('.country_name1'),
+	country2 = document.querySelectorAll('.country_name2'),
+	phoneInputs = document.querySelectorAll('.phone-black');
+append();
+contrySelect();
+
+
+
+
+
+
 const isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);
@@ -124,6 +236,96 @@ function handleCheckedSymptoms() {
 }
 
 handleCheckedSymptoms();
+
+let diagnosticText = document.querySelector('.symptoms-result__tip');
+
+function adaptive() {
+    let tablet = ($(window).width());
+    if (tablet <= 1171) {
+        diagnosticText.innerHTML = 'Отметьте выше симптомы которые вас беспокоят, затем нажмите кнопку “результат”';
+    } else {
+        diagnosticText.innerHTML = 'Отметьте слева симптомы которые вас беспокоят, затем нажмите кнопку “результат”';
+    }
+};
+adaptive();
+
+
+let drawLine = function () {
+    let allCanvas = document.querySelectorAll('.canvas');
+    for (let i = 0; i < allCanvas.length; i++) {
+        const canvas = allCanvas[i];
+        const ctx = canvas.getContext('2d');
+        let wid = canvas.parentNode.offsetWidth;
+        let hgh = canvas.parentNode.offsetHeight;
+        canvas.width = wid;
+        canvas.height = hgh;
+        ctx.strokeStyle = '#f4090a';
+        ctx.lineWidth = '1';
+        ctx.clearRect(0, 0, wid, hgh);
+        ctx.beginPath();
+        ctx.moveTo(0 + 3, 0 + 5);
+        ctx.lineTo(wid - 1, hgh - 5);
+        ctx.moveTo(0 + 3, hgh - 5);
+        ctx.lineTo(wid - 1, 0 + 5);
+        ctx.stroke();
+    }
+};
+
+function drawWithTimeout(time) {
+    setTimeout(drawLine, time)
+}
+
+// function initAll() {
+//     document.addEventListener("DOMContentLoaded", function () {
+//         drawLine();
+//         function addEventToBtn() {
+//             let buttons = document.querySelectorAll('.ever-popup-btn');
+//             for (let i = 0; i < buttons.length; i++) {
+//                 buttons[i].addEventListener('click', function () {
+//                     drawLine();
+//                 });
+//                 drawLine();
+//             }
+//         }
+
+//         setTimeout(addEventToBtn, 500);
+//         document.body.addEventListener('mouseleave', function () {
+//             drawWithTimeout(100);
+//         });
+//     });
+// }
+
+// initAll();
+
+let drawTriangle = function () { // For triangles with shadow painting
+    let allCanvas = document.querySelectorAll('.triangle')
+    if (!allCanvas) {
+        return
+    } else {
+        for (let i = 0; i < allCanvas.length; i++) {
+            const canvas = allCanvas[i];
+            const context = canvas.getContext('2d');
+            let wid = 20;
+            let hgh = 38;
+            canvas.width = wid;
+            canvas.height = hgh;
+            context.clearRect(0, 0, wid, hgh);
+            context.beginPath();
+            context.moveTo(6, 19);
+            context.lineTo(20, 4);
+            context.lineTo(20, 34);
+            context.closePath();
+            context.shadowColor = "rgba(0,0,0,.08)";
+            context.shadowBlur = 10;
+            context.shadowOffsetX = -1;
+            context.shadowOffsetY = 0;
+            context.fillStyle = "#fff";
+            context.fill();
+        }
+    }
+};
+
+drawTriangle();
 
 
 const parasiteItem = document.querySelectorAll('.interactive__list__item');
