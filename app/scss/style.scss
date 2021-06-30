@@ -1,3 +1,40 @@
+// @mixin font($font_name, $file_name, $weight, $style) {
+//     @font-face {
+//         font-family: $font_name;
+//         font-display: swap;
+//         src: url("..fonts/#{file_name}.woff") format("woff"), url("..fonts/#{file_name}.woff2") format("woff2");
+//         font-weight: #{$weight};
+//         font-style: #{$style};
+//     }
+// }
+
+
+// @import "fonts";
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Regular.woff2"), url("../fonts/Montserrat-Regular.woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Bold.woff2"), url("../fonts/Montserrat-Bold.woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Black.woff2"), url("../fonts/Montserrat-Black.woff");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+}
+
 /*Обнуление*/
 *{padding: 0;margin: 0;border: 0;}
 *,*:before,*:after{
@@ -2696,11 +2733,12 @@ figure.anim-items {
     }
 
     &__column-1 {
-        width: 50%;
+        // width: 50%;
     }
 
     &__column-2 {
-        width: 50%;
+        margin: 0 0 0 20px;
+        // width: 50%;
          
     }
 
@@ -2712,7 +2750,7 @@ figure.anim-items {
     }
 
     &__symptoms-image {
-        margin: 0 40px 0 0;
+        margin: 0 20px 0 0;
     }
 
     &__symptoms-text {
@@ -2726,21 +2764,15 @@ figure.anim-items {
 .prevention {
     padding: 60px 0;
 
-    &__inner {
-    }
-
-    &__items {
-    }
-
     &__item {
         display: flex;
         align-items: center;
         justify-content: space-around;
         }
     
-    &__item-section {
-        margin: 10px;
-    }
+        &__item-section {
+            margin: 10px;
+        }
     }
 
 
@@ -3442,7 +3474,7 @@ ul li.footer__item::before {
             &__columns {
                 flex-direction:column-reverse;
                 align-items: center;
-                padding-bottom: 20px;
+                // padding-bottom: 20px;
 
             }
     
@@ -3455,8 +3487,8 @@ ul li.footer__item::before {
                 }
                 
     
-                & button.btn-buy {
-                    margin-bottom: 20px;
+                .button {
+                    text-align: center;
                 }
             }
 
@@ -5736,7 +5768,6 @@ ul li.footer__item::before {
 		}
 
 		&__text {
-            
             margin: 30px 0 0 0;
 		}
 

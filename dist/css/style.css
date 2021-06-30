@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2"), url("../fonts/Montserrat-Regular.woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.woff2"), url("../fonts/Montserrat-Bold.woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Black.woff2"), url("../fonts/Montserrat-Black.woff");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
 /*Обнуление*/
 
 * {
@@ -2920,12 +2944,8 @@ figure.anim-items.active {
           justify-content: space-between;
 }
 
-.how__column-1 {
-  width: 50%;
-}
-
 .how__column-2 {
-  width: 50%;
+  margin: 0 0 0 20px;
 }
 
 .how__symptoms {
@@ -2942,7 +2962,7 @@ figure.anim-items.active {
 }
 
 .how__symptoms-image {
-  margin: 0 40px 0 0;
+  margin: 0 20px 0 0;
 }
 
 .how__symptoms-text {
@@ -3637,7 +3657,6 @@ ul li.footer__item::before {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 20px;
   }
 
   .hero__text {
@@ -3649,8 +3668,8 @@ ul li.footer__item::before {
     margin: 40px auto;
   }
 
-  .hero__text button.btn-buy {
-    margin-bottom: 20px;
+  .hero__text .button {
+    text-align: center;
   }
 
   .hero__list {
