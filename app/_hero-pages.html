@@ -11,7 +11,7 @@
             </div>
             <div class="hero-pages__buttons">
                 <div class="hero-pages__contacts anim-items anim-hide">
-                    <div><b>Тел:</b> <a href="phone:+78004444459">+7 (800) 444-44-59</a></div>
+                    <div><b>Тел:</b> <a href="tel:+78123180063">+7 (812) 318-00-63</a></div>
                     <div><b>E-Mail:</b> <a href="mailto:info@gelmi-flor-official.ru">info@gelmi-flor-official.ru</a></div>
                 </div>
                 <a class="popup-link hero-pages__btn-1 btn-buy anim-items anim-hide" href="#popup">Заказать со скидкой</a>
@@ -22,7 +22,14 @@
                 <div class="popup__content">
                     <a href="#header" class="popup__close close-popup">X</a>
                     <div class="popup__buy-form">
-                        <h3>Акция! Только сегодня!</h3>
+                        <h3>Акция! Только сегодня <span class="nowdate" daysint="">
+                            <script>
+                                d=new Date();
+                                p=new Date(d.getTime());
+                                monthA="января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря".split(",");
+                                document.write(p.getDate()+" "+monthA[p.getMonth()]+" "+p.getFullYear()) + " г. ";
+                                </script>
+                        </span>!</h3>
                         <div class="popup__price-new buy__price-new">
                         <span>168 руб.</span>
                         </div>
