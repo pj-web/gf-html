@@ -281,73 +281,11 @@ document.addEventListener('keydown', function (e) {
 
 
 
-// let date = new Date('May 11 2021 17:20:00');
-
-// function counts() {
-//     let now = new Date();
-//     gap = date - now;
-
-//     let days = Math.floor(gap / 1000 / 60 / 60 / 24);
-//     let hours = Math.floor(gap / 1000 / 60 / 60 ) % 24;
-//     let minutes = Math.floor(gap / 1000 / 60 ) % 60;
-//     let seconds = Math.floor(gap / 1000 ) % 60;
-
-//     if (gap < 0) {
-//         days = days + 1;
-//         hours = hours + 24;
-//         minutes = minutes + 60;
-//         seconds = seconds + 60;
-//     }
-//     document.getElementById('days').innerText = days;
-//     document.getElementById('hours').innerText = hours;
-//     document.getElementById('minutes').innerText = minutes;
-//     document.getElementById('seconds').innerText = seconds;
-// }
-// counts();
-
-// setInterval(counts, 1000);
 
 
 
 
 
-
-
-//<![CDATA[
-    var remain_bv   = 80768;
-    function parseTime_bv(timestamp){
-        if (timestamp < 0) timestamp = 0;
-     
-        var day = Math.floor( (timestamp/60/60) / 24);
-        var hour = Math.floor(timestamp/60/60);
-        var mins = Math.floor((timestamp - hour*60*60)/60);
-        var secs = Math.floor(timestamp - hour*60*60 - mins*60); 
-        var left_hour = Math.floor( (timestamp - day*24*60*60) / 60 / 60 );
-     
-        $('span.countdown__item-day').text(day);
-        $('span.countdown__item-hour').text(left_hour);
-     
-        if(String(mins).length > 1)
-            $('span.countdown__item-minute').text(mins);
-        else
-            $('span.countdown__item-minute').text("0" + mins);
-        if(String(secs).length > 1)
-            $('span.countdown__item-second').text(secs);
-        else
-            $('span.countdown__item-second').text("0" + secs);
-         
-    }
-     
-    jQuery(function() {
-        setInterval(function(){
-            remain_bv = remain_bv - 1;
-            parseTime_bv(remain_bv);
-            if(remain_bv <= 0){
-                alert('Hello');
-            }
-        }, 1000);
-    });
-    //]]>
 
     $('.pharmacies__item-title').on('click', function () {
         $(this).toggleClass('in').next().slideToggle();
@@ -403,7 +341,7 @@ document.addEventListener('keydown', function (e) {
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [55.747368, 37.707107],
+            center: [59.958611, 30.405313],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 15,
