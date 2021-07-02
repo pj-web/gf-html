@@ -756,10 +756,6 @@ figure.anim-items.active {
   display: none;
 }
 
-.menu__item + .menu__item {
-  margin: 40px 0 0 0;
-}
-
 .menu__item a {
   color: #fff;
   font-size: 36px;
