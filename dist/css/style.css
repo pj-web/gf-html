@@ -3495,31 +3495,23 @@ ul li.footer__item::before {
   margin: 0px 0px 40px 0;
 }
 
-.contacts__inner h3 {
-  text-align: left;
-}
-
 .contacts__map {
   margin: 0 0 20px 20px;
 }
 
 .contacts__team {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 0 20px 0;
 }
 
 .contacts__team-item {
   text-align: center;
+  line-height: 1;
+}
+
+.contacts__team-item h4 {
+  margin-top: 10px;
 }
 
 .contacts__team-item span {
@@ -4019,13 +4011,11 @@ ul li.footer__item::before {
   }
 
   .contacts__team {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contacts__team-item {
-    width: 50%;
-    margin: 20px 0 0 0;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -4471,6 +4461,10 @@ ul li.footer__item::before {
     max-width: 300px;
   }
 
+  .contacts__team {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .contacts__team-item {
     width: 100%;
   }
@@ -4483,6 +4477,10 @@ ul li.footer__item::before {
 }
 
 @media (max-width: 425px) {
+  h1 {
+    font-size: 36px;
+  }
+
   h2 {
     font-size: 24px;
   }
@@ -4536,8 +4534,12 @@ ul li.footer__item::before {
     font-size: 15px;
   }
 
+  .hero__image img {
+    max-width: 350px;
+  }
+
   .description__column-1 img {
-    max-width: 360px;
+    max-width: 350px;
   }
 
   .symptoms__item:not(:nth-child(2n)):after {
