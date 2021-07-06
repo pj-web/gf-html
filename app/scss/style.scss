@@ -1040,6 +1040,10 @@ figure.anim-items {
 
 .buy {
 
+    h3 {
+        margin: 0;
+    }
+
     &__inner {
         padding: 60px 0;
     }
@@ -1051,7 +1055,7 @@ figure.anim-items {
 
     &__price-new {
         span {
-            font-size: 58px;
+            font-size: 48px;
             font-weight: 700;
             color: #FF4141;
         }
@@ -1062,7 +1066,7 @@ figure.anim-items {
 
 	&__price-old {
         span {
-            font-size: 36px;
+            font-size: 28px;
             text-decoration: line-through;
         }
 	}
@@ -1076,7 +1080,7 @@ figure.anim-items {
 
 
     &__columns {
-        margin: 40px 0 0 0;
+        margin: 0px 0 20px 0;
         display: flex;
         align-items: center;
 
@@ -1113,7 +1117,6 @@ figure.anim-items {
             border:2px solid #FF4141;
             border-radius:5px;
             background:#fff;
-            // font:34px/35px;
             font-size: 24px;
             line-height: 30px;
             color:#000;
@@ -1472,207 +1475,7 @@ figure.anim-items {
     background: 0 0
   }
   
-  .comebacker {
-    z-index: 10000000;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    backdrop-filter: blur(5px);
-    height: 100%;
-    background: rgba(0, 0, 0, .5)
-  }
   
-  .comebacker-wrapper {
-    margin: 0 15px
-  }
-  
-  .comebacker-body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
-    grid-gap: 15px
-  }
-  
-  .comebacker .order-form-label:after,
-  .comebacker .order-form-label:before {
-    content: none
-  }
-  
-  .comebacker form {
-    background: 0 0;
-    padding: 25px;
-    background: #f5f5f5;
-    border: 1px solid #eee;
-    margin: 0
-  }
-  
-  .comebacker .comebacker-product-image {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    display: inline-block;
-    max-width: 300px
-  }
-  
-  .comebacker .comebacker-modal {
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .25);
-    border-radius: 2.5px;
-    overflow: hidden;
-    background: #fff;
-    max-width: 800px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    position: relative
-  }
-  
-  .comebacker .comebacker-button-close-wrapper {
-    height: 50px
-  }
-  
-  .comebacker .comebacker-button-close {
-    background: url(../img/close.png) no-repeat center center;
-    height: inherit;
-    width: 50px;
-    float: right;
-    cursor: pointer
-  }
-  
-  .comebacker .comebacker-button-close:active {
-    opacity: .25;
-    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .5)
-  }
-  
-  .comebacker .comebacker-content {
-    overflow: auto;
-    padding: 0 25px 25px
-  }
-  
-  .comebacker .comebacker-header {
-    margin: 0 0 25px;
-    text-align: center
-  }
-  
-  .comebacker .order-form-input-field-wrapper {
-    margin: 0 0 15px
-  }
-  
-  .comebacker .order-form-input-field {
-    transition: .25s;
-    display: block;
-    width: 100%;
-    height: 40px;
-    background: #fff;
-    line-height: 30px;
-    padding: 0 10px;
-    outline: 0;
-    box-shadow: none;
-    font-size: 14px;
-    border: 2px solid #eee;
-    border-radius: 2.5px;
-    color: #212121;
-    box-sizing: border-box
-  }
-  
-  .comebacker .comebacker-product-description {
-    margin: 15px 0 0
-  }
-  
-  .comebacker .comebacker-product-description ul li {
-    padding: 0;
-    margin: 0;
-    font-size: 14px
-  }
-  
-  .comebacker .comebacker-product-description ul {
-    color: #555;
-    margin: 0;
-    padding: 0
-  }
-  
-  .comebacker .order-form-submit-button {
-    border-radius: 2.5px;
-    display: inline-block;
-    background: #d32f2f;
-    line-height: 50px;
-    padding: 0 25px;
-    color: #fff;
-    border: 0;
-    width: 100%;
-    outline: 0;
-    font-weight: 700;
-    box-shadow: none;
-    font-size: 16px;
-    cursor: pointer;
-    box-sizing: border-box;
-    height: auto;
-    margin: 0
-  }
-  
-  .comebacker .order-form-label {
-    color: #212121;
-    display: block;
-    font-size: 10px;
-    font-weight: 700;
-    text-align: left;
-    padding: 0;
-    line-height: 14px;
-    margin: 0 0 5px;
-    text-transform: uppercase
-  }
-  
-  .comebacker .order-form-submit-button:hover {
-    background: #b71c1c;
-    color: #fff
-  }
-  
-  .comebacker .comebacker-deadline-text {
-    font-size: 20px;
-    margin: 0 0 15px
-  }
-  
-  .comebacker .comebacker-product-image-wrapper {
-    text-align: center
-  }
-  
-  .comebacker .comebacker-product-price {
-    color: #fff;
-    font-weight: 700;
-    position: relative;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    padding: 0
-  }
-  
-  .comebacker-product-image-section {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto
-  }
-  
-  .comebacker-product-date {
-    color: #fff;
-    font-size: 12px
-  }
-  
-  .comebacker .comebacker-product-price-wrapper {
-    opacity: .9;
-    display: grid;
-    width: 125px;
-    height: 125px;
-    text-align: center;
-    background: url(../img/product-banner.png) no-repeat center;
-    background-size: 100%;
-    position: absolute;
-    align-items: center;
-    top: 0;
-    right: 0
-  }
 
 //   .order-form-input-field-wrapper {
 //     width:100%;
@@ -2606,7 +2409,7 @@ figure.anim-items {
     background: #FF4141;
     border-radius: 5px;
     transition: all 0.5s ease 0s;
-    padding: 25px 41px 25px 41px;
+    padding: 25px 88px;
     color: #fff;
     margin-bottom: 20px;
 
