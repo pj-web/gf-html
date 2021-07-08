@@ -3354,7 +3354,7 @@ ul li.footer__item::before {
 
   .header__item-2 {
     padding: 0px 0 0 50px;
-    max-width: 230px;
+    max-width: 200px;
     font-size: 14px;
   }
 
@@ -3851,6 +3851,10 @@ ul li.footer__item::before {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .header__item-2 {
+    max-width: 175px;
   }
 
   .menu__body {

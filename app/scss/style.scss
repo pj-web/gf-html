@@ -3119,7 +3119,7 @@ ul li.footer__item::before {
 
         &__item-2 {
             padding: 0px 0 0 50px;
-            max-width: 230px;
+            max-width: 200px;
             font-size: 14px;
 
             &::before {
@@ -3762,6 +3762,10 @@ ul li.footer__item::before {
         }
     
         &__menu {
+        }
+
+        &__item-2 {
+            max-width: 175px;
         }
     
         &__phone {
